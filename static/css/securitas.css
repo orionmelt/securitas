@@ -1,0 +1,20 @@
+h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+}
+
+.container {
+	padding-top: 40px;
+}
+
+.row {
+	margin-bottom: 20px;
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+.blurred {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.25);
+}

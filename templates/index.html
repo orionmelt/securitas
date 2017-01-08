@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <img src="/static/img/logo.png" width="300" height="225">
+      <h1>Securitas</h1>
+    </div>
+    <div class="col-md-9">
+      <div class="row">
+        <div class="col-md-4 text-right">
+          <h4>Nexmo configuration</h4>
+        </div>
+        <div class="col-md-8">
+          <p>Nexmo API Key:</p>
+          <input type="text" class="blurred" value="{{ config['nexmo_key'] }}">
+          <p>Nexmo API Secret:</p>
+          <input type="text" class="blurred" value="{{ config['nexmo_secret'] }}">
+          <p>Your phone number:</p>
+          <input type="text" class="blurred" value="{{ config['phone_number'] }}">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 text-right">
+          <h4>Dropbox configuration</h4>
+        </div>
+        <div class="col-md-8">
+          <p>Dropbox API Key:</p>
+          <input type="text" class="blurred" value="{{ config['dropbox_key'] }}">
+          <p>Dropbox API Secret:</p>
+          <input type="text" class="blurred" value="{{ config['dropbox_secret'] }}">
+          <p>Dropbox Status:</p>
+          {% if dropbox_flow_url %}
+          <p class="text-danger">Not configured</p>
+          <a href="{{ dropbox_flow_url }}" target="_blank">Click here to authorize Dropbox.</a>
+          <form action="/auth-dropbox" method="post">
+          <p>Dropbox Authorization Code:</p>
+          <input type="text" name="authcode" placeholder="Dropbox auth code">
+          <button class="btn btn-default btn-sm" type="submit">Save</button>
+          </form>
+          {% else %}
+          <p class="text-success">Configured</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="text-center">
+    {% if dropbox_flow_url %}
+    <h2 class="text-danger">Dropbox setup incomplete.</h2>
+    {% else %}
+    <h2 class="text-success">You're all set. Say "Alexa, trigger Securitas" to get started.</h2>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

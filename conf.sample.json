@@ -1,0 +1,20 @@
+{  
+   "min_motion_frames":8,
+   "show_video":true,
+   "min_upload_seconds":3.0,
+   "fps":16,
+   "camera_warmup_time":2.5,
+   "min_area":5000,
+   "delta_thresh":5,
+   "resolution":[  
+      640,
+      480
+   ],
+   "temp_thresh":32.8,
+   "dropbox_key":"DROPBOX_KEY",
+   "dropbox_secret":"DROPBOX_SECRET",
+   "nexmo_key":"NEXMO_KEY",
+   "nexmo_secret":"NEXMO_SECRET",
+   "nexmo_number":"NEXMO_PHONE_NUMBER",
+   "phone_number":"YOUR_PHONE_NUMBER"
+}
