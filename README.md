@@ -10,4 +10,4 @@ Home safety system using Raspberry Pi and Nexmo API.
 
 Watch demo on YouTube:
 
-[![Securitas demo](https://i.ytimg.com/vi/PaA48O9YiLc/2.jpg?time=1483920263101)](https://youtu.be/PaA48O9YiLc)
+[![Securitas demo](https://i.ytimg.com/vi/PaA48O9YiLc/0.jpg?time=1483920263101)](https://youtu.be/PaA48O9YiLc)
