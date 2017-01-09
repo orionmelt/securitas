@@ -15,5 +15,5 @@ Watch demo on YouTube:
 How to run:
 * `export FLASK_APP=server.py`
 * `flask run --host=0.0.0.0 --port=8000`
-* Visit `/start` (or configure Alexa to make a web request to this URL) to start detection
-* Visit `/stop` to stop detection
+* Visit `/start` (or configure Alexa using IFTTT to listen to a phrase such as "trigger Securitas" to make a web request to this URL) to start detection
+* Visit `/stop` (or configure Alexa using IFTTT to listen to a phrase such as "trigger I am home" to make a web request to this URL) to stop detection
